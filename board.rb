@@ -1,3 +1,4 @@
+require "byebug"
 require_relative "tile"
 
 class Board
@@ -26,10 +27,10 @@ class Board
     grid[x][y]
   end
 
-  def []=(pos, value)
+  def []=(pos, val)
     x, y = pos
     tile = grid[x][y]
-    tile.value = value
+    tile.value = val
   end
 
   def columns
